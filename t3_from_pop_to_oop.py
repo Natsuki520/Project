@@ -6,7 +6,7 @@ class Student:
     def display_info(self):
         print ("name:" , self.name , "          score:" , self.score)
     
-    @property
+    @property 
     def calculate_grades(self):
         if self.score >=85:
             return "A"
@@ -16,7 +16,7 @@ class Student:
             return "C"
         else :
             return "D"
-    
+        
     def pass_check(self):
         if self.score >= 60:
             return "Pass"
@@ -30,10 +30,11 @@ class Student:
         print ("Pass or Fail:" , self.pass_check())
 
 try:
-    name1 = input("input name:")
-    score1 = int(input("input score:"))
-    student1 = Student (name1 , score1)
-    student1.generate_report()
+    if __name__ == "__main__":
+        name1 = input("input name:")
+        score1 = int(input("input score:"))
+        student1 = Student (name1 , score1)
+        student1.generate_report()
 
 except ValueError:
     print ("please input correct score!")

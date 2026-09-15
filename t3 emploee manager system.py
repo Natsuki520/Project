@@ -28,13 +28,14 @@ class Developer(Employee):
 class Designer(Employee):
     def work(self):
         print(self.name, "is creating designs.")
-        
+
 # Create employee objects
 developer = Developer("Alice", 5000)
 designer = Designer("Bob", 4500)
 # Store the objects in a list
 employees = [developer, designer]
 # Display information
+
 for employee in employees:
     print("Name:", employee.name)
     print("Salary:", employee.salary)
